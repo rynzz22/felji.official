@@ -8,9 +8,9 @@ import { About } from './components/Sections/About';
 import { Footer } from './components/Layout/Footer';
 import { CustomCursor } from './components/UI/CustomCursor';
 import { TechBackground } from './components/UI/TechBackground';
+import { ThemeProvider } from './context/ThemeContext';
 
-function App() {
-  
+function AppContent() {
   useEffect(() => {
     // Initialize Lenis for smooth momentum scrolling
     const lenis = new Lenis({
@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative transition-colors duration-500">
       <CustomCursor />
       <TechBackground />
       <Navbar />
@@ -60,6 +60,14 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

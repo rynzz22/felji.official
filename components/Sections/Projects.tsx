@@ -6,17 +6,17 @@ export const Projects: React.FC = () => {
   return (
     <Section id="projects">
       <div className="flex flex-col items-start mb-12 relative z-10">
-        <span className="px-3 py-1 rounded-full bg-zinc-100/80 backdrop-blur-sm text-brand-navy text-xs font-bold mb-4 border border-zinc-200">
+        <span className="px-3 py-1 rounded-full bg-zinc-100/80 dark:bg-zinc-800/80 backdrop-blur-sm text-brand-navy dark:text-zinc-200 text-xs font-bold mb-4 border border-zinc-200 dark:border-zinc-700 transition-colors">
            Current Development
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold text-brand-navy">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white transition-colors duration-500">
           Projects & Initiatives
         </h2>
       </div>
 
       {/* Adaptive Glass Project Card */}
       {/* Using 'group' to trigger hover effects on children */}
-      <div className="group relative rounded-[2.5rem] p-[1px] bg-gradient-to-b from-white/20 to-transparent hover:from-brand-green/50 hover:to-brand-navy/50 transition-all duration-700 shadow-2xl shadow-zinc-200/50 hover:shadow-brand-green/10">
+      <div className="group relative rounded-[2.5rem] p-[1px] bg-gradient-to-b from-white/20 to-transparent hover:from-brand-green/50 hover:to-brand-navy/50 dark:from-white/10 transition-all duration-700 shadow-2xl shadow-zinc-200/50 dark:shadow-black/50 hover:shadow-brand-green/10">
         
         {/* Inner Card Content */}
         <div className="relative rounded-[2.5rem] p-8 md:p-16 bg-zinc-900 overflow-hidden isolate h-full">
