@@ -49,14 +49,14 @@ export const CustomCursor: React.FC = () => {
       {/* Main Cursor Dot */}
       <div 
         ref={cursorRef} 
-        className="absolute top-0 left-0 w-3 h-3 bg-brand-navy rounded-full -translate-x-1/2 -translate-y-1/2 will-change-transform z-50 mix-blend-difference"
+        className="absolute top-0 left-0 w-3 h-3 bg-brand-navy dark:bg-white rounded-full -translate-x-1/2 -translate-y-1/2 will-change-transform z-50 mix-blend-difference transition-colors duration-300"
       />
       
       {/* Trailing Ring */}
       <div 
         ref={followerRef}
-        className={`absolute top-0 left-0 w-8 h-8 border border-brand-green rounded-full will-change-transform transition-all duration-300 ease-out z-40 opacity-50
-          ${isHovering ? 'scale-150 bg-brand-green/20 border-brand-green' : 'scale-100'}
+        className={`absolute top-0 left-0 w-8 h-8 border border-brand-green dark:border-white/50 rounded-full will-change-transform transition-all duration-300 ease-out z-40 opacity-50
+          ${isHovering ? 'scale-150 bg-brand-green/20 dark:bg-white/10 border-brand-green dark:border-white' : 'scale-100'}
         `}
       />
     </div>
